@@ -87,6 +87,13 @@ flutter:
     - lib/assets/button.png
     - lib/assets/item.png
     - lib/assets/me.jpg
+    - lib/assets/camcup.png
+    - lib/assets/tentrai.png
+    - lib/assets/monan.png
+    - lib/assets/frame.png
+    - lib/assets/frame.png
+    - lib/assets/vuong3.png
+    - lib/assets/clock.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

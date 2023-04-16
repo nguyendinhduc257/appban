@@ -2,7 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
-import 'home.dart';
+import 'successful.dart';
 
 void main() {
   runApp(
@@ -74,7 +74,7 @@ class _firstScreenState extends State<firstScreen> {
                         ))),
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: ((context) => SecondScreen())));
+                          builder: ((context) => Successful())));
                     },
                     child: const Text('Register'),
                   ),

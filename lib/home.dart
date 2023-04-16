@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:start/item.dart';
 
 class ThirdScreen extends StatefulWidget {
   const ThirdScreen({Key? key}) : super(key: key);
@@ -67,30 +68,27 @@ class _ThirdScreenState extends State<ThirdScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      _key.currentState!.openDrawer();
-                    },
-                    child: Container(
-                      child: Image(image: AssetImage('lib/assets/Group.png')),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        _key.currentState!.openDrawer();
+                      },
+                      child: Container(
+                        child: Image(image: AssetImage('lib/assets/Group.png')),
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 240.0,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Container(
-                      child: Image(image: AssetImage('lib/assets/Vector.png')),
+                    TextButton(
+                      onPressed: () {},
+                      child: Container(
+                        child:
+                            Image(image: AssetImage('lib/assets/Vector.png')),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               Row(
@@ -229,7 +227,10 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 21, 0, 0),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: ((context) => Item())));
+                        },
                         child: (Container(
                           height: 230,
                           width: 165,

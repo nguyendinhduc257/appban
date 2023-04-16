@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'main.dart';
+import 'item.dart';
 
 class SecondScreen extends StatefulWidget {
   const SecondScreen({super.key});
@@ -74,7 +76,8 @@ class _SecondScreenState extends State<SecondScreen> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: ((context) => firstScreen())));
                     },
                     child: Text(
                       'Sign Up',
